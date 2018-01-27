@@ -26,3 +26,22 @@ add
      git add -A
 
      git add .
+
+
+     state1 中增加了一个文件 README
+      diff state0 state1 -ur 
+      Binary files state0/.git/index and state1/.git/index differ
+      Only in state1/.git/objects: 13
+      Only in state1: README
+
+     state2 中修改了一个文件 README
+      $ diff state1 state2/ -ur
+      Binary files state1/.git/index and state2/.git/index differ
+      Only in state2/.git/objects: b2
+      diff -ur state1/README state2/README
+      --- state1/README       2018-01-27 12:31:26.290818232 +0800
+      +++ state2/README       2018-01-27 12:34:11.534815272 +0800
+      @@ -1,2 +1,3 @@
+       
+       
+      +

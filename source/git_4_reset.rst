@@ -12,6 +12,8 @@ reset
           可以将远程仓库 恢复到 上一次 push之前
                git reset –hard <commitID> (如果要覆盖远程必须强制推  git push -f)
 
+          git reset只是在本地仓库中回退版本，而远程仓库的版本不会变化?
+
 
           可以将 工作区 恢复到 和 暂存区 一样吗?可以,但是不用 reset
           用checkout
