@@ -29,14 +29,12 @@ git checkout README 和git checkout --  README 效果一样
 2/ 
 
 git add 之后怎么撤销 git add 
-git rm --cached <file>...    这个适用于 任何一个时候 
+
 git reset HEAD README        注意:执行这个命令的前提是 当前至少有一次提交
+如果想去除修改 git checkout -- README
 
-
-两个效果一样
-     撤销了 add ,但是保留了修改
-     如果想去除修改 git checkout -- README
-     都删除了 暂存区中的内容
+撤销了 add ,但是保留了修改
+删除了 暂存区中的内容
 
 这个不好 ,会撤销到 commit 之前,保留了git add 之后的修改,但是 之前 暂存区中 的 README 东西就没了
 并且 README 不会被追踪了 ,这是就不会能 git check README ,撤销到上一次add之前的状态了

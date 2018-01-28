@@ -11,6 +11,7 @@ diff
      diff 的默认对象是 master
 
      可以拿 工作区 和 master 比较
+     git diff
 
      可以拿暂存区 和 master 比较
 
