@@ -13,19 +13,22 @@ repo start master --all
 branch
 =======
 
-git checkout -b dev
 
+## 切换到分支做事情
+git checkout -b dev
 do_things
      modify
      git add 
      git commit
-
 git checkout master
 
-git merge dev
+## 切换到主分支更新
+git fetch
+git merge origin/master
 
-git merge
 
+## 将分支上的更改merge 到主分支
+git merge dev 
 git branch -d dev
 
 
