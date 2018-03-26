@@ -32,6 +32,36 @@ git merge dev
 git branch -d dev
 
 
+问题及出问题后的流程
+=======================
+
+$ git merge dev
+error: merge is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+$ git status 
+On branch master
+Your branch is up-to-date with 'origin/master'.
+You have unmerged paths.
+(fix conflicts and run "git commit")
+
+Unmerged paths:
+(use "git add <file>..." to mark resolution)
+
+both modified:   source/file_merge
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git add source/file_merge
+
+
+$ git commmit -m "aaa"
+
+$ git branch -d dev
+
+$ git push origin master
 
 
 add
@@ -45,4 +75,6 @@ git add -A
 
 
 git checkout -- file 
+
+
 
