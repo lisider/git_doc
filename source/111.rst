@@ -13,3 +13,5 @@ doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 git commit -m "111" 做了一次提交,这次提交的结果是
      在本地新建了个节点,且让HEAD移到最新节点
 
+git log --graph --all
+注意 HEAD 不一定指向一个分支，也可以指向一个 commit
