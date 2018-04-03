@@ -136,6 +136,8 @@ git push -f
 
 6/
 
+git revert <commit>
+
 git revert HEAD                     //撤销最近一次提交
 git revert HEAD~1                   //撤销上上次的提交，注意：数字从0开始
 git revert 0ffaacc                  //撤销0ffaacc这次提交

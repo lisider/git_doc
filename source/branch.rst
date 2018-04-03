@@ -63,7 +63,7 @@ branch
      # 合并指定分支到当前分支
      $ git merge [branch]
 
-     # 选择一个commit，合并进当前分支
+     # 选择一个commit，合并进当前分支,合并的是该提交以及之前的提交
      $ git cherry-pick [commit]
 
      # 删除分支
@@ -78,12 +78,18 @@ branch
      origin  git@github.com:michaelliao/learngit.git (fetch)
      origin  git@github.com:michaelliao/learngit.git (push)
 
+     git branch -vv
+     * dev    6ec6694 [origin/dev] add 12 on dev
+       master 7ea920f [origin/master] add 11
 
 
      上面显示了可以抓取和推送的origin的地址。如果没有推送权限，就看不到push的地址。
 
 
      并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
+
+
+     取决于有没有伙伴在上面开发
 
      master分支是主分支，因此要时刻与远程同步；
 
@@ -97,7 +103,7 @@ branch
 
      拉下来代码,只有 master 分支,但 远程仓库上 有很多分支
      需要
-     git checkout -b dev origin/dev
+     git checkout --track origin/dev
 
 
 
@@ -110,7 +116,6 @@ branch
      所以接下来要这样做
      Git已经提示我们，先用git pull把最新的提交从origin/dev抓下来，
      然后，在本地合并，解决冲突，再推送：
-     git branch --set-upstream dev origin/dev 绑定连接
      git pull
      解决冲突(这时候会提示冲突)
      $git pull 
@@ -146,6 +151,10 @@ branch
      git commit -m "merge & fix hello.py"
      git push origin dev
 
+远程分支branch
+================
+
+::
 
      Git远程分支管理
      git pull (抓取远程仓库所有分支更新并合并到本地)
