@@ -31,9 +31,14 @@ remote repo
           git push origin master # 将本地主分支推到远程主分支
           git push -u origin master # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)
 
-          git push origin # 创建远程分支， origin是远程仓库名
-          git push origin : # 创建远程分支
+          git push origin # 创建远程分支， origin是远程仓库名 ,这个是无效的
+          git push origin : # 创建远程分支 ,这个也是无效的
           git push origin : #先删除本地分支(git br -d )，然后再push删除远程分支
+
+          git checkout -b dev
+          git push origin dev
+
+
 
 
 
