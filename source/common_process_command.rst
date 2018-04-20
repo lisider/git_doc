@@ -31,9 +31,9 @@ https://github.com
 显示一些如何把已有的本地库关联到当前远程库的信息.
 
 6/注意:
-     此时没有远程分支.
-     如果此时clone, clone 到的仓库没有远程分支和本地分支.
-          但一次commit 就生成了分支,且分支名为 master
+此时没有远程分支.
+如果此时clone, clone 到的仓库没有远程分支和本地分支.
+但一次commit 就生成了分支,且分支名为 master
 
 ```
 
@@ -43,6 +43,7 @@ https://github.com
 
 git clone git@github.com:lisider/red_packets.git
 git clone https://github.com/lisider/red_packets.git
+
 
 
 ---------------------------------------------------------------
@@ -59,6 +60,12 @@ git clone 做了什么
 下载了远程上的 head
 创建了一个本地master 分支,与远程master分支绑定
 并不会创建其他本地分支 ,git clone 命令默认的只会建立master分支
+
+git clone -b dev url 
+
+下载仓库中的所有数据,并创建分支 本地 分支 dev,并与 远程的 dev 绑定 
+注意: dev 分支必须在远程仓库中存在.
+fatal: Remote branch dev not found in upstream origin
 
 
 git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git、本地文件协议等，下面是一些例子。
@@ -205,9 +212,9 @@ push 和merge 好像差不多.
 
 git checkout -b dev
 do_things
-     modify
-     git add 
-     git commit
+modify
+git add 
+git commit
 git checkout master
 
 
